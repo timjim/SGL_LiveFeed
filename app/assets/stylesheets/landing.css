@@ -1,0 +1,224 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  background-image: url("header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#welcome_container {
+  margin: 20px auto 40px auto;
+  height: 125px;
+  text-align: center;
+}
+
+#welcome_container div {
+  display: inline-block;
+}
+
+.divider {
+  width: 2px;
+  margin: 0 10px;
+  height: 100%;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 5%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.65)), color-stop(5%,rgba(0,0,0,0.65)), color-stop(75%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.logo {
+  height: 125px;
+  width: 210px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.zom {
+  position: relative;
+  top: -40px;
+}
+
+#text {
+  position: relative;
+  top: -30px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.text {
+  width: 70%;
+  height: 200px;
+  margin: 18px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+#welcome_container h1, #welcome_container h2 {
+  margin: -10px 0
+}
+
+.red {
+  color: #AB1F23;
+}
+
+.grey {
+  color: rgb(204, 204, 204);
+}
+
+#whatis, #event_start {
+  width: 97%;
+  height: 40px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.1); 
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  border-radius: 2px;
+}
+
+#whatis div {
+  width: 33%;
+  float: left;
+  height: 100%;
+  text-align: center;
+}
+
+#event_start div {
+  text-align: center;
+}
+
+#description {
+  vertical-align: top;
+  text-align: left;
+  width: 97%;
+  height: 200px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+
+#description div, #whatis div {
+/*  display: inline-block;*/
+  float: left;
+  height: 100%;
+}
+
+.image img {
+  border-radius: 2px;
+}
+
+.login {
+  margin-bottom: 40px;
+}
+
+#partners {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+p {
+  padding: 10px 0;
+}
+
+.cass {
+  position: relative;
+  bottom: 6px;
+}
+
+iframe {
+  margin: 10px;
+  width: 96%;
+}
+
+#youtube {
+  background-color: rgb(204, 204, 204);
+  height: 45vh;
+  position: absolute;
+  top: 5vh;
+  left: 14%;
+  width: 35%;
+}
+
+#youtube iframe {
+  height: 83%;
+}
+
+#slido {
+  background-color: rgb(204, 204, 204);
+  height: 90vh;
+  position: absolute;
+  top: 5vh;
+  right: 14%;
+  width: 35%;
+}
+
+#whois {
+  background-color: rgb(204, 204, 204);
+  height: 41vh;
+  position: absolute;
+  top: 54vh;
+  left: 14%;
+  width: 35%;
+}
+
+#slido iframe {
+  height: 91.5%;
+}
+
+#defaultCountdown {
+  width: 100%;
+  height: 80px;
+  color: black;
+}
+
+#clock {
+  line-height: 40px;
+}
+
+#feed {
+  width: 100%;
+}
+
+#youtube h1, #slido h1, #whois h1 {
+  margin: 10px 10px 0 10px;
+}
+
+#linkedin {
+  background-color: #007bb6;
+  color: white;
+  border-radius: 2px;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding: 10px;
+}

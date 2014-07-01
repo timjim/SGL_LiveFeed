@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @event = Event.where(:when  )
+    @event = Event.future.up_to(1.month.from_now).first
 
     respond_to do |format|
       format.html # index.html.erb

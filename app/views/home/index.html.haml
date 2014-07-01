@@ -4,4 +4,60 @@
   = alert
 
 %h1
-  =@events
+  =@event.company
+
+#welcome_container.clearfix
+  .logo
+    = image_tag 'logo.png'
+  .divider
+  #text
+    %h1
+      %span Welcome to the London
+      %span.red Live Feed
+    %h2 
+      %span
+        = @event.start_time.strftime("%-d %B %Y")
+      %span
+        with
+      %span.red
+        = @event.guest
+  .divider
+  .logo
+    =image_tag @event.company_image_url, :class => "zom"
+
+#whatis
+  %div
+    %p Watch the live feed
+  %div
+    %p Ask questions
+  %div
+    %p Connect with others
+
+#event_start
+  #clock.red
+
+#description
+  .image
+    =image_tag @event.guest_image_url
+  .text
+    %h2 GUEST
+    %p
+      = @event.guest_bio
+
+.login
+  - if current_user
+    = current_user.email
+    = link_to "Log out", destroy_user_session_path, method: :delete
+  - else
+    = link_to user_omniauth_authorize_path(:linkedin) do
+      #linkedin
+        %p Sign in with LinkedIn
+    = link_to new_user_session_path do
+      %p Sign in with email 
+    = link_to new_user_registration_path do
+      %p Register with email 
+
+#partners
+  %p.grey THANK YOU TO OUR AMAZING PARTNERS
+  = image_tag "google.png"
+  = image_tag "cass.png", :class => "cass"
