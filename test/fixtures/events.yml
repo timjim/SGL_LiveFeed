@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  guest: MyString
+  company: MyString
+  guest_bio: MyString
+  guest_image_url: MyString
+  company_image_url: MyString
+  host: MyString
+  host_image_url: MyString
+  when: 2014-07-01 12:00:38
+  location: MyString
+  youtube_url: MyString
+  slido_url: MyString
+  eventbrite_url: MyString
+
+two:
+  guest: MyString
+  company: MyString
+  guest_bio: MyString
+  guest_image_url: MyString
+  company_image_url: MyString
+  host: MyString
+  host_image_url: MyString
+  when: 2014-07-01 12:00:38
+  location: MyString
+  youtube_url: MyString
+  slido_url: MyString
+  eventbrite_url: MyString

@@ -28,10 +28,13 @@ end
 gem 'jquery-rails'
 
 # Uses devise and cancan
-gem 'rails-admin'
+gem 'rails_admin', '~> 0.4.9'
 
 # HAML
 gem 'haml-rails'
 
 #OmniAuth
 gem 'omniauth-linkedin'
+
+
+gem "devise"

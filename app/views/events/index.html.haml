@@ -1,0 +1,41 @@
+%h1 Listing events
+
+%table
+  %tr
+    %th Guest Name
+    %th Company
+    %th Guest Description
+    %th Guest Profile Image URL
+    %th Company Logo Image URL
+    %th Host Name
+    %th Host Profile Image URL
+    %th When
+    %th Location
+    %th Youtube Live Feed URL
+    %th Slido URL
+    %th Eventbrite URL
+    %th
+    %th
+    %th
+
+  - @events.each do |event|
+    %tr
+      %td= event.guest
+      %td= event.company
+      %td= event.guest_bio
+      %td= event.guest_image_url
+      %td= event.company_image_url
+      %td= event.host
+      %td= event.host_image_url
+      %td= event.when
+      %td= event.location
+      %td= event.youtube_url
+      %td= event.slido_url
+      %td= event.eventbrite_url
+      %td= link_to 'Show', event
+      %td= link_to 'Edit', edit_event_path(event)
+      %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Event', new_event_path

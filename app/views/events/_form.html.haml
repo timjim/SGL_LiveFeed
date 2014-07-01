@@ -1,0 +1,46 @@
+= form_for @event do |f|
+  - if @event.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label "Guest Name"
+    = f.text_field :guest
+  .field
+    = f.label "Company Name"
+    = f.text_field :company
+  .field
+    = f.label "Guest Description"
+    = f.text_field :guest_bio
+  .field
+    = f.label "Guest Profile Image URL"
+    = f.text_field :guest_image_url
+  .field
+    = f.label "Company Logo Image URL"
+    = f.text_field :company_image_url
+  .field
+    = f.label "Host Name"
+    = f.text_field :host
+  .field
+    = f.label "Host Profile Image URL"
+    = f.text_field :host_image_url
+  .field
+    = f.label "When"
+    = f.datetime_select :when
+  .field
+    = f.label "Location"
+    = f.text_field :location
+  .field
+    = f.label "Youtube Live Feed URL"
+    = f.text_field :youtube_url
+  .field
+    = f.label "Slido URL"
+    = f.text_field :slido_url
+  .field
+    = f.label "Eventbrite URL"
+    = f.text_field :eventbrite_url
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Guest Name:
+  = @event.guest
+%p
+  %b Company Name:
+  = @event.company
+%p
+  %b Guest Description:
+  = @event.guest_bio
+%p
+  %b Guest Profile Image URL:
+  = @event.guest_image_url
+%p
+  %b Guest Profile Image URL:
+  = @event.company_image_url
+%p
+  %b Host Name:
+  = @event.host
+%p
+  %b Host Profile Image URL:
+  = @event.host_image_url
+%p
+  %b When:
+  = @event.when
+%p
+  %b Location:
+  = @event.location
+%p
+  %b Youtube Live Feed URL:
+  = @event.youtube_url
+%p
+  %b Slido URL:
+  = @event.slido_url
+%p
+  %b Eventbrite URL:
+  = @event.eventbrite_url
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path
