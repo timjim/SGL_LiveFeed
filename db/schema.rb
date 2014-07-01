@@ -11,23 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140701112848) do
+ActiveRecord::Schema.define(:version => 20140701143556) do
 
   create_table "events", :force => true do |t|
     t.string   "guest"
     t.string   "company"
-    t.string   "guest_bio"
+    t.text     "guest_bio"
     t.string   "guest_image_url"
     t.string   "company_image_url"
     t.string   "host"
     t.string   "host_image_url"
-    t.datetime "when"
+    t.datetime "start_time"
     t.string   "location"
     t.string   "youtube_url"
     t.string   "slido_url"
     t.string   "eventbrite_url"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.datetime "end_time"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

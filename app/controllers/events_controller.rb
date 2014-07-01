@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+
+  scope :event_due, lambda {
+
   # GET /events
   # GET /events.json
   def index
