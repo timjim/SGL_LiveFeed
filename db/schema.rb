@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140702130117) do
+ActiveRecord::Schema.define(:version => 20140702221401) do
 
   create_table "events", :force => true do |t|
     t.string   "guest"
@@ -61,6 +61,10 @@ ActiveRecord::Schema.define(:version => 20140702130117) do
     t.string   "role"
     t.string   "uid"
     t.string   "provider"
+    t.string   "name"
+    t.string   "image"
+    t.string   "industry"
+    t.string   "title"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, omniauth_providers: [:linkedin]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :title, :industry, :name, :image
   # attr_accessible :title, :body
 
   def self.find_for_linkedin_oauth2(auth, signed_in_user=nil)
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
         # user.skip_confirmation! # don't require email confirmation
         # user.save
-        # user
+        # User
       end
     end
   end
