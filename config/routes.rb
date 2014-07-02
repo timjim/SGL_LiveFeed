@@ -1,11 +1,13 @@
 SglFeed::Application.routes.draw do
-  devise_for :users
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :events
 
   root to: "home#index" 
+
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
