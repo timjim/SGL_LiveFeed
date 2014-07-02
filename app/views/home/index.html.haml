@@ -28,13 +28,16 @@
     =image_tag @event.company_image_url, :id => 'company'
 
 #whatis
-  %h2 Use this page to watch the live feed, ask questions, and connect with others. 
+  %h2 Watch the live feed, ask questions, and connect with others. 
 
 #description
   .image
     =image_tag @event.guest_image_url
   .text
-    %h2 GUEST
+    %h2
+      %span GUEST -
+      %span.red
+        = @event.guest
     %p
       = @event.guest_bio
 
@@ -42,9 +45,12 @@
   .image
     =image_tag @event.host_image_url
   .text
-    %h2 HOST
+    %h2
+      %span.red
+        = @event.host
+      %span - HOST
     %p
-      @event.host_bio   
+      = @event.host_bio   
 
 .login
   - if current_user
