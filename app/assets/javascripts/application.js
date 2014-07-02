@@ -12,4 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require countdown
+
+$(document).ready(function() {
+  date = $('#date').html();
+  console.log(date);
+  grind = new Date(date);
+  $('#clock').countdown(grind, function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<span>%w</span> weeks '
+    + '<span>%d</span> days '
+    + '<span>%H</span> hr '
+    + '<span>%M</span> min '
+    + '<span>%S</span> sec'));
+  });
+});

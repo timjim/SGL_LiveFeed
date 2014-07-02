@@ -4,6 +4,10 @@
   clear: both;
 }
 
+.hidden {
+  display: none;
+}
+
 html {
   background-image: url("header-bg.jpg");
   background-repeat: no-repeat;

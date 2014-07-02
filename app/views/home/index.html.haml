@@ -3,8 +3,8 @@
 %p.alert
   = alert
 
-%h1
-  =@event.company
+#date.hidden
+  = @event.start_time.strftime("%Y, %-m, %d")
 
 #welcome_container.clearfix
   .logo
@@ -21,6 +21,8 @@
         with
       %span.red
         = @event.guest
+    #event_start
+      #clock.red
   .divider
   .logo
     =image_tag @event.company_image_url, :class => "zom"
@@ -33,8 +35,7 @@
   %div
     %p Connect with others
 
-#event_start
-  #clock.red
+
 
 #description
   .image
