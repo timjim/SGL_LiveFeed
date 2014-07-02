@@ -8,34 +8,27 @@
 
 #welcome_container.clearfix
   .logo
-    = image_tag 'logo.png'
-  .divider
+    = image_tag 'logo.png', :id => 'sgl'
   #text
-    %h1
-      %span Welcome to the London
-      %span.red Live Feed
-    %h2 
-      %span
-        = @event.start_time.strftime("%-d %B %Y")
-      %span
-        with
-      %span.red
-        = @event.guest
-    #event_start
-      #clock.red
-  .divider
+    .subtitle.grey_bg.mb_fix 
+      %h1
+        %span Startup Grind London:
+        %span.red Live Feed
+    .subtitle 
+      %h2 
+        %span
+          = @event.start_time.strftime("%-d %B %Y")
+        %span
+          with
+        %span.red
+          = @event.guest
+    #event_start.subtitle
+      #clock
   .logo
-    =image_tag @event.company_image_url, :class => "zom"
+    =image_tag @event.company_image_url, :id => 'company'
 
 #whatis
-  %div
-    %p Watch the live feed
-  %div
-    %p Ask questions
-  %div
-    %p Connect with others
-
-
+  %h2 Use this page to watch the live feed, ask questions, and connect with others. 
 
 #description
   .image
@@ -44,6 +37,14 @@
     %h2 GUEST
     %p
       = @event.guest_bio
+
+#host_description
+  .image
+    =image_tag @event.host_image_url
+  .text
+    %h2 HOST
+    %p
+      @event.host_bio   
 
 .login
   - if current_user

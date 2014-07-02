@@ -26,8 +26,7 @@ a {
 }
 
 #welcome_container {
-  margin: 20px auto 40px auto;
-  height: 125px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -35,7 +34,24 @@ a {
   display: inline-block;
 }
 
-.divider {
+#event_start {
+  background-color: #AB1F23;
+}
+
+.mb_fix{
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  height: 48px;
+  line-height: 48px;
+}
+
+#event_start div {
+  text-align: center;
+}
+
+.divider {x
   width: 2px;
   margin: 0 10px;
   height: 100%;
@@ -49,32 +65,41 @@ a {
 }
 
 .logo {
-  height: 125px;
-  width: 210px;
+  height: 140px;
+  width: 140px;
   overflow: hidden;
-  border-radius: 2px;
+  background-color: white;
+  border: solid 5px rgb(180,180,180);
 }
 
 .logo img {
   width: 100%;
+  margin: 0 auto;
 }
 
-.zom {
+#sgl {
   position: relative;
-  top: -40px;
+  top: 40px;
+  width: 80%;
 }
 
 #text {
-  position: relative;
-  top: -30px;
-  line-height: 62px;
   text-align: center;
+  position: relative;
+  top: -21px;
+}
+
+#text h1, #text h2 {
+  padding: 0 20px;
+}
+
+#text div {
+  display: block;
 }
 
 .text {
   width: 70%;
-  height: 200px;
-  margin: 18px;
+  padding: 18px;
 }
 
 h1 {
@@ -97,24 +122,17 @@ h2 {
   color: rgb(204, 204, 204);
 }
 
-#whatis, #event_start {
+.grey_bg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#whatis {
   width: 97%;
-  height: 40px;
   margin: 0 auto;
   background-color: rgba(0,0,0,0.1); 
   margin-bottom: 20px;
-  font-size: 1.2em;
+  padding: 10px 0;
   border-radius: 2px;
-}
-
-#whatis div {
-  width: 33%;
-  float: left;
-  height: 100%;
-  text-align: center;
-}
-
-#event_start div {
   text-align: center;
 }
 
@@ -122,12 +140,13 @@ h2 {
   vertical-align: top;
   text-align: left;
   width: 97%;
-  height: 200px;
+  height: 160px;
   margin: 0 auto;
   font-size: 1.2em;
   margin-bottom: 20px;
   background-color: rgba(0,0,0,0.1);
   border-radius: 2px;
+  overflow: hidden;
 }
 
 #description div, #whatis div {
@@ -136,8 +155,27 @@ h2 {
   height: 100%;
 }
 
+#host_description {
+  vertical-align: top;
+  text-align: right;
+  width: 97%;
+  height: 160px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#host_description div {
+  float: right;
+  height: 100%;
+}
+
 .image img {
   border-radius: 2px;
+  width: 160px;
 }
 
 .login {
@@ -205,7 +243,7 @@ iframe {
 }
 
 #clock {
-  line-height: 40px;
+  color: white;
 }
 
 #feed {
