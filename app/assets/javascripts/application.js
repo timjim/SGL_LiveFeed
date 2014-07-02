@@ -15,15 +15,20 @@
 //= require countdown
 
 $(document).ready(function() {
-  date = $('#date').html();
-  console.log(date);
-  grind = new Date(date);
-  $('#clock').countdown(grind, function(event) {
-  var $this = $(this).html(event.strftime(''
-    + '<span>%w</span> weeks '
-    + '<span>%d</span> days '
-    + '<span>%H</span> hr '
-    + '<span>%M</span> min '
-    + '<span>%S</span> sec'));
-  });
+  startDate = $('#startDate').html();
+  nowDate = $('#nowDate').html();
+  grind = new Date(startDate);
+
+  if((new Date(startDate).getTime() > new Date(nowDate).getTime())){
+    $('#clock').countdown(grind, function(event) {
+    var $this = $(this).html(event.strftime(''
+      + '<span>%w</span> weeks '
+      + '<span>%d</span> days '
+      + '<span>%H</span> hr '
+      + '<span>%M</span> min '
+      + '<span>%S</span> sec'));
+    });
+  } else {
+    $('#clock').html('LIVE NOW')
+  }
 });

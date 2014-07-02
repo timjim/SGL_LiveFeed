@@ -3,8 +3,10 @@
 %p.alert
   = alert
 
-#date.hidden
-  = @event.start_time.strftime("%Y, %-m, %d")
+#startDate.hidden
+  = @event.start_time.strftime("%Y, %-m, %d %H:%M:%S")
+#nowDate.hidden
+  = Time.now.strftime("%Y, %-m, %d %H:%M:%S")
 
 #welcome_container.clearfix
   .logo
