@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    @event = Event.future.up_to(1.month.from_now).first
+    # @event = Event.future.up_to(1.month.from_now).first
+    @event = Event.next_deadline.first
 
     respond_to do |format|
       format.html # index.html.erb
