@@ -166,7 +166,6 @@ h2 {
 }
 
 .login {
-  margin-bottom: 40px;
   background-color: rgba(0,0,0,0.1);
   width: 49%;
   float: left;
@@ -183,6 +182,7 @@ h2 {
   width: 97%;
   height: 160px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .eventbrite {
@@ -194,18 +194,25 @@ h2 {
 
 .location {
   margin: 0 14px;
-  padding: 0;
+  padding: 4px 0;
+}
+
+#eventbutton, #logoutbutton {
+  color: white;
+  border-radius: 2px;
+  width: 90%;
+  margin: 14px auto 10px auto;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
 }
 
 #eventbutton {
   background-color: #FF8000;
-  color: white;
-  border-radius: 2px;
-  width: 90%;
-  margin: 14px auto;
-  font-size: 1.2em;
-  padding: 10px;
-  text-align: center;
+}
+
+#logoutbutton {
+  background-color: #AB1F23;
 }
 
 #partners {
