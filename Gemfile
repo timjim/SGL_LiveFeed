@@ -36,5 +36,6 @@ gem 'haml-rails'
 #OmniAuth
 gem 'omniauth-linkedin'
 
-
 gem "devise"
+
+gem 'cancan'

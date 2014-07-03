@@ -6,6 +6,8 @@ SglFeed::Application.routes.draw do
 
   root to: "home#index" 
 
+  match '/feed', to: "home#feed"
+
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   # The priority is based upon order of creation:
