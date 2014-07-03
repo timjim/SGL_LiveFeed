@@ -52,25 +52,12 @@ a {
   text-align: center;
 }
 
-.divider {x
-  width: 2px;
-  margin: 0 10px;
-  height: 100%;
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 5%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.65)), color-stop(5%,rgba(0,0,0,0.65)), color-stop(75%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 75%,rgba(0,0,0,0) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
 .logo {
   height: 140px;
   width: 140px;
   overflow: hidden;
   background-color: white;
-  border: solid 5px rgb(180,180,180);
+  border: solid 3px rgb(180,180,180);
 }
 
 .logo img {
@@ -87,11 +74,11 @@ a {
 #text {
   text-align: center;
   position: relative;
-  top: -21px;
+  top: -19px;
 }
 
 #text h1, #text h2 {
-  padding: 0 59px;
+  padding: 0 62px;
 }
 
 #text div {
@@ -130,7 +117,6 @@ h2 {
 #whatis {
   width: 97%;
   margin: 0 auto;
-  background-color: rgba(0,0,0,0.1); 
   margin-bottom: 20px;
   padding: 10px 0;
   border-radius: 2px;
@@ -181,11 +167,50 @@ h2 {
 
 .login {
   margin-bottom: 40px;
+  background-color: rgba(0,0,0,0.1);
+  width: 49%;
+  float: left;
+  height: 100%;
+}
+
+.log {
+  text-align: center;
+  color: gray;
+  text-decoration: underline;
+}
+
+#bottom {
+  width: 97%;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.eventbrite {
+  width: 49%;
+  float: right;
+  background-color: rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.location {
+  margin: 0 14px;
+  padding: 0;
+}
+
+#eventbutton {
+  background-color: #FF8000;
+  color: white;
+  border-radius: 2px;
+  width: 90%;
+  margin: 14px auto;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
 }
 
 #partners {
   text-align: center;
-  margin-bottom: 80px;
+  margin: 20px auto 80px auto;
 }
 
 p {
@@ -259,9 +284,13 @@ iframe {
   background-color: #007bb6;
   color: white;
   border-radius: 2px;
-  width: 200px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 14px auto 7px auto;
   font-size: 1.2em;
-  margin-bottom: 10px;
   padding: 10px;
+  text-align: center;
+}
+
+.notice {
+  text-align: center;
 }

@@ -54,18 +54,34 @@
     %p
       = @event.host_bio   
 
-.login
-  - if current_user
-    = current_user.email
-    = link_to "Log out", destroy_user_session_path, method: :delete
-  - else
-    = link_to user_omniauth_authorize_path(:linkedin) do
-      #linkedin
-        %p Sign in with LinkedIn
-    = link_to new_user_session_path do
-      %p Sign in with email 
-    = link_to new_user_registration_path do
-      %p Register with email 
+#bottom  
+  .login
+    - if current_user
+      %p
+        = current_user.name
+      %p
+        = current_user.title
+      = image_tag current_user.image
+      = current_user.email
+      = link_to "Log out", destroy_user_session_path, method: :delete
+    - else
+      = link_to user_omniauth_authorize_path(:linkedin) do
+        #linkedin
+          %p Sign in with LinkedIn
+      = link_to new_user_session_path do
+        .log
+          %p Sign in with email 
+      = link_to new_user_registration_path do
+        .log
+          %p.log Register with email
+  .eventbrite
+    = link_to @event.eventbrite_url do
+      #eventbutton
+        %p Attend in person (Eventbrite)
+    %p.location
+      %span Location:
+      %span
+        =@event.location
 
 #partners
   %p.grey THANK YOU TO OUR AMAZING PARTNERS

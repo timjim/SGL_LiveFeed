@@ -31,4 +31,6 @@ $(document).ready(function() {
   } else {
     $('#clock').html('LIVE NOW')
   }
+
+  $('.notice').delay(2000).slideUp(400);
 });
