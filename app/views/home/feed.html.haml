@@ -17,13 +17,12 @@
         - @users.each do |user|
           .cycle
             %p
-              %span
-                = user.name
-              %span -
-              %span
-                = user.title
+              = user.name
             %p
-              = image_tag user.image
+              = user.title
+            %p
+              = link_to user.link, target: '_blank' do
+                = image_tag user.image
     #feedlogout
       - if current_user
         = link_to destroy_user_session_path, method: :delete do

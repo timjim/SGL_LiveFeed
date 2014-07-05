@@ -78,3 +78,12 @@ iframe {
   padding: 10px;
   text-align: center;
 }
+
+.cycle {
+  width: 100%;
+}
+
+.cycle p {
+  margin: 0 14px;
+  text-align: center;
+}

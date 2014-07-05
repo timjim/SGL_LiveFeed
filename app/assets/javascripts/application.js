@@ -37,6 +37,7 @@ $(document).ready(function() {
 
   $('#user_profiles').cycle({ 
     fx: 'fade', 
-    timeout:  3000 
+    timeout:  6000 
   });
+
 });
