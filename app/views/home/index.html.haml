@@ -73,12 +73,12 @@
       = link_to user_omniauth_authorize_path(:linkedin) do
         #linkedin
           %p Sign in with LinkedIn
-      = link_to new_user_session_path do
-        .log
-          %p Sign in with email 
       = link_to new_user_registration_path do
         .log
           %p.log Register with email
+      = link_to new_user_session_path do
+        .log
+          %p Sign in with email 
   .eventbrite
     = link_to @event.eventbrite_url do
       #eventbutton

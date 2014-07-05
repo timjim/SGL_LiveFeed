@@ -40,4 +40,19 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  # def self.new_with_session(params, session)
+  #   super.tap do |user|
+  #     if auth = session["devise.linkedin_data"]
+  #       user.role ||= 'user'
+  #       user.link = auth.info.urls.public_profile if user.link.blank?
+  #       user.name = auth.info.name if user.name.blank?
+  #       user.image = auth.info.image if user.image.blank?
+  #       user.email = auth.info.email if user.email.blank?
+  #       user.title = auth.info.description if user.title.blank?
+  #       user.industry = auth.info.industry if user.industry.blank?
+  #       user.skip_confirmation!
+  #     end
+  #   end   
+  # end
 end

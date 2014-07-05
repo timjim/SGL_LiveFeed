@@ -10,6 +10,10 @@ SglFeed::Application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
+  devise_scope :user do
+    resources :users
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
