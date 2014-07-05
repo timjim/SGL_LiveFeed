@@ -1,30 +1,3 @@
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.hidden {
-  display: none;
-}
-
-html {
-  background-image: url("header-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
-}
-
-body {
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: 'Titillium Web', Helvetica, sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 #welcome_container {
   margin: 0 auto;
   text-align: center;
@@ -90,28 +63,8 @@ a {
   padding: 18px;
 }
 
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.6em;
-}
-
 #welcome_container h1, #welcome_container h2 {
   margin: -10px 0
-}
-
-.red {
-  color: #AB1F23;
-}
-
-.grey {
-  color: rgb(204, 204, 204);
-}
-
-.grey_bg {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #whatis {
@@ -137,7 +90,6 @@ h2 {
 }
 
 #description div, #whatis div {
-/*  display: inline-block;*/
   float: left;
   height: 100%;
 }
@@ -207,14 +159,6 @@ h2 {
   text-align: center;
 }
 
-#eventbutton {
-  background-color: #FF8000;
-}
-
-#logoutbutton {
-  background-color: #AB1F23;
-}
-
 #partners {
   text-align: center;
   margin: 20px auto 80px auto;
@@ -229,46 +173,6 @@ p {
   bottom: 6px;
 }
 
-iframe {
-  margin: 10px;
-  width: 96%;
-}
-
-#youtube {
-  background-color: rgb(204, 204, 204);
-  height: 45vh;
-  position: absolute;
-  top: 5vh;
-  left: 14%;
-  width: 35%;
-}
-
-#youtube iframe {
-  height: 83%;
-}
-
-#slido {
-  background-color: rgb(204, 204, 204);
-  height: 90vh;
-  position: absolute;
-  top: 5vh;
-  right: 14%;
-  width: 35%;
-}
-
-#whois {
-  background-color: rgb(204, 204, 204);
-  height: 41vh;
-  position: absolute;
-  top: 54vh;
-  left: 14%;
-  width: 35%;
-}
-
-#slido iframe {
-  height: 91.5%;
-}
-
 #defaultCountdown {
   width: 100%;
   height: 80px;
@@ -277,14 +181,6 @@ iframe {
 
 #clock {
   color: white;
-}
-
-#feed {
-  width: 100%;
-}
-
-#youtube h1, #slido h1, #whois h1 {
-  margin: 10px 10px 0 10px;
 }
 
 #linkedin {

@@ -8,8 +8,45 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require reset
  *= require landing
  *= require login
+ *= require colours
+ *= require feed
+ *= require_self
  */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  background-image: url("header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}

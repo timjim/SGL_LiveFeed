@@ -1,0 +1,23 @@
+.red {
+  color: #AB1F23;
+}
+
+.red_bg {
+  background-color: #AB1F23;
+}
+
+.grey {
+  color: rgb(204, 204, 204);
+}
+
+.grey_bg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#eventbutton {
+  background-color: #FF8000;
+}
+
+#logoutbutton {
+  background-color: #AB1F23;
+}

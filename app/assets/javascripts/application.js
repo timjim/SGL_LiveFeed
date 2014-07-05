@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require countdown
+//= require cycle
 
 $(document).ready(function() {
   startDate = $('#startDate').html();
@@ -33,4 +34,9 @@ $(document).ready(function() {
   }
 
   $('.notice').delay(2000).slideUp(400);
+
+  $('#user_profiles').cycle({ 
+    fx: 'fade', 
+    timeout:  3000 
+  });
 });
