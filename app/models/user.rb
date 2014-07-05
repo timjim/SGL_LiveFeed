@@ -32,8 +32,8 @@ class User < ActiveRecord::Base
         user.image = auth.info.image 
         user.email = auth.info.email 
         user.title = auth.info.description 
-        user.indu stry = auth.info.industry
-        user.password = Devise.friendly_token[0,20]
+        user.industry = auth.info.industry
+        # user.password = Devise.friendly_token[0,20]
         # user.skip_confirmation! # don't require email confirmation
         # user.save
         # User
