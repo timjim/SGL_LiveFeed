@@ -125,9 +125,13 @@
 }
 
 .log {
+  color: white;
+  border-radius: 2px;
+  width: 90%;
+  margin: 14px auto 10px auto;
+  font-size: 1.2em;
+  padding: 10px;
   text-align: center;
-  color: gray;
-  text-decoration: underline;
 }
 
 #bottom {

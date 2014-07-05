@@ -83,7 +83,7 @@ iframe {
   width: 100%;
 }
 
-.cycle p {
+.cycle p, #whois p {
   margin: 0 14px;
   text-align: center;
 }

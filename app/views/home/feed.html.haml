@@ -13,17 +13,23 @@
     #whois
       .header.red_bg
         %h1.red ONLINE MEMBERS
-      #user_profiles
-        - @users.each do |user|
-          .cycle
-            %p
-              = user.name if user.name
-            %p
-              = user.title if user.title
-            %p
-              -if user.link
-                = link_to user.link, target: '_blank' do
-                  = image_tag user.image
+      - if !current_user.image
+        = link_to user_omniauth_authorize_path(:linkedin) do
+          #linkedin
+            %p Link your LinkedIn account
+        %p To see other LinkedIn viewers
+      - else
+        #user_profiles
+          - @users.each do |user|
+            .cycle
+              %p
+                = user.name if user.name
+              %p
+                = user.title if user.title
+              %p
+                -if user.link
+                  = link_to user.link, target: '_blank' do
+                    = image_tag user.image
     #feedlogout
       - if current_user
         = link_to destroy_user_session_path, method: :delete do

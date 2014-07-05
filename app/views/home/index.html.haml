@@ -73,15 +73,12 @@
       %p.location
         = current_user.email
     - else
-      = link_to user_omniauth_authorize_path(:linkedin) do
-        #linkedin
-          %p Sign in with LinkedIn
       = link_to new_user_registration_path do
-        .log
-          %p.log Register with email
+        .log.green
+          %p Register with email
       = link_to new_user_session_path do
-        .log
-          %p Sign in with email 
+        .log.blue
+          %p Sign in
   .eventbrite
     -if @event
       = link_to @event.eventbrite_url do
