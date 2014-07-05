@@ -5,6 +5,7 @@ class Ability
 
     unless user
       can :index
+      can :create, User
       cannot :feed
     else
       can :feed
