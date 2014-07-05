@@ -4,7 +4,7 @@
   = alert
 
 #startDate.hidden
-  = @event.start_time.strftime("%Y, %-m, %d %H:%M:%S")
+  = @event.start_time.strftime("%Y, %-m, %d %H:%M:%S") if @event
 #nowDate.hidden
   = Time.zone.now.strftime("%Y, %-m, %d %H:%M:%S")
 
@@ -19,40 +19,43 @@
     .subtitle 
       %h2 
         %span
-          = @event.start_time.strftime("%-d %B %Y")
+          = @event.start_time.strftime("%-d %B %Y") if @event
         %span
           with
         %span.red
-          = @event.guest
+          = @event.guest if @event
     #event_start.subtitle
       #clock
   .logo
-    =image_tag @event.company_image_url, :id => 'company'
+    -if @event
+      =image_tag @event.company_image_url, :id => 'company'
 
 #whatis
   %h2 Watch the live feed, ask questions, and connect with others. 
 
 #description
   .image
-    =image_tag @event.guest_image_url
+    -if @event
+      =image_tag @event.guest_image_url
   .text
     %h2
       %span GUEST -
       %span.red
-        = @event.guest
+        = @event.guest if @event
     %p
-      = @event.guest_bio
+      = @event.guest_bio if @event
 
 #host_description
   .image
-    =image_tag @event.host_image_url
+    -if @event
+      =image_tag @event.host_image_url
   .text
     %h2
       %span.red
-        = @event.host
+        = @event.host if @event
       %span - HOST
     %p
-      = @event.host_bio   
+      = @event.host_bio if @event
 
 #bottom  
   .login
@@ -80,13 +83,14 @@
         .log
           %p Sign in with email 
   .eventbrite
-    = link_to @event.eventbrite_url do
-      #eventbutton
-        %p Attend in person (Eventbrite)
+    -if @event
+      = link_to @event.eventbrite_url do
+        #eventbutton
+          %p Attend in person (Eventbrite)
     %p.location
       Location:
     %p.location
-      =@event.location
+      =@event.location if @event
 
 #partners
   %p.grey THANK YOU TO OUR AMAZING PARTNERS
