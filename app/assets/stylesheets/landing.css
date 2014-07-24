@@ -1,9 +1,12 @@
 #welcome_wrap {
   width: 100%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 #welcome_container {
-  height: 200px;
+/*  height: 200px;*/
   margin: 0 auto;
   color: white;
   text-align: center;
@@ -93,6 +96,7 @@
   padding: 10px 0;
   border-radius: 2px;
   text-align: center;
+    padding-top: 200px;
 }
 
 #whatis h2 {
@@ -196,7 +200,7 @@ p {
 .cass {
   position: relative;
   bottom: 6px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 #defaultCountdown {

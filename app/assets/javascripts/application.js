@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require countdown
 //= require cycle
+//= require skrollr.min
 
 $(document).ready(function() {
   startDate = $('#startDate').html();
@@ -49,5 +50,9 @@ $(document).ready(function() {
     fx: 'fade', 
     timeout:  6000 
   });
+
+  $('#text').addClass('bounceInDown animated');
+
+  var s = skrollr.init();
 
 });
