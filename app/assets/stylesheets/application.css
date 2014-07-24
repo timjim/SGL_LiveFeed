@@ -26,21 +26,16 @@
   display: none;
 }
 
-html {
-  background-image: url("header-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
-}
-
 body {
-  max-width: 960px;
-  margin: 40px auto;
   font-family: 'Titillium Web', Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+a:visited, a:link, a:hover, a:active {
+  color: white;
 }
 
 h1 {

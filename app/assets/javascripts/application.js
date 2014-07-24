@@ -40,4 +40,14 @@ $(document).ready(function() {
     timeout:  6000 
   });
 
+  $('#host_comp').cycle({ 
+    fx: 'fade', 
+    timeout:  6000 
+  });
+
+  $('#guest_comp').cycle({ 
+    fx: 'fade', 
+    timeout:  6000 
+  });
+
 });

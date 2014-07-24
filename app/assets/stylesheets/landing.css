@@ -1,57 +1,76 @@
+#welcome_wrap {
+  width: 100%;
+}
+
 #welcome_container {
+  height: 200px;
   margin: 0 auto;
+  color: white;
   text-align: center;
 }
 
 #welcome_container div {
   display: inline-block;
-}
-
-#event_start {
-  background-color: #AB1F23;
+  overflow: hidden;
 }
 
 .mb_fix{
   margin-bottom: 10px;
 }
 
+#clock {
+  font-size: 1.6em;
+}
+
 .subtitle {
   height: 48px;
   line-height: 48px;
-  padding: 0 40px;
 }
 
+.first {
+  padding-top:24px;
+}
+
+
 #event_start div {
+  text-align: left;
+}
+
+.logo, .host {
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+  background-color: white;
   text-align: center;
 }
 
-.logo {
-  height: 140px;
-  width: 140px;
+#guest_comp, #host_comp {
   overflow: hidden;
-  background-color: white;
-  border: solid 3px rgb(180,180,180);
-}
-
-.logo img {
-  width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  width: 200px;
 }
 
 #sgl {
-  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 54px;
+}
+
+.host img {
+  width: 100%;
+}
+
+#sgl {
   top: 40px;
   width: 80%;
 }
 
 #text {
-  text-align: center;
+  text-align: left;
   position: relative;
-  top: -19px;
-}
-
-#text h1, #text h2 {
-  padding: 0 62px;
+  height: 100%;
+  margin-left: 20px;
 }
 
 #text div {
@@ -61,6 +80,7 @@
 .text {
   width: 75%;
   padding: 18px;
+  height: 100%;
 }
 
 #welcome_container h1, #welcome_container h2 {
@@ -68,23 +88,27 @@
 }
 
 #whatis {
-  width: 97%;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  width: 100%;
+  height: 100px;
   padding: 10px 0;
   border-radius: 2px;
   text-align: center;
 }
 
+#whatis h2 {
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 100px;
+  color: white;
+}
+
 #description {
   vertical-align: top;
   text-align: left;
-  width: 97%;
-  height: 160px;
+  max-width: 960px;
+  height: 200px;
   margin: 0 auto;
   font-size: 1.2em;
-  margin-bottom: 20px;
-  background-color: rgba(0,0,0,0.1);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -97,12 +121,10 @@
 #host_description {
   vertical-align: top;
   text-align: right;
-  width: 97%;
-  height: 160px;
+  max-width: 960px;
+  height: 200px;
   margin: 0 auto;
   font-size: 1.2em;
-  margin-bottom: 20px;
-  background-color: rgba(0,0,0,0.1);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -118,54 +140,53 @@
 }
 
 .login {
-  background-color: rgba(0,0,0,0.1);
-  width: 49%;
+  width: 50%;
   float: left;
   height: 100%;
 }
 
+.login, .eventbrite {
+  margin-top: 20px;
+}
+
 .log {
   color: white;
-  border-radius: 2px;
-  width: 90%;
-  margin: 14px auto 10px auto;
+  width: 100%;
   font-size: 1.2em;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
 }
 
 #bottom {
-  width: 97%;
+  max-width: 960px;
   height: 160px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  text-align: center;
 }
 
 .eventbrite {
-  width: 49%;
+  width: 50%;
   float: right;
-  background-color: rgba(0,0,0,0.1);
   height: 100%;
 }
 
 .location {
-  margin: 0 14px;
-  padding: 4px 0;
+  padding: 10px 0;
+  line-height: 39px;
 }
 
 #eventbutton, #logoutbutton {
   color: white;
-  border-radius: 2px;
-  width: 90%;
-  margin: 14px auto 10px auto;
+  width: 100%;
   font-size: 1.2em;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
 }
 
 #partners {
   text-align: center;
-  margin: 20px auto 80px auto;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
 p {
@@ -175,16 +196,13 @@ p {
 .cass {
   position: relative;
   bottom: 6px;
+  margin-left: 20px;
 }
 
 #defaultCountdown {
   width: 100%;
   height: 80px;
   color: black;
-}
-
-#clock {
-  color: white;
 }
 
 #linkedin {
@@ -200,4 +218,10 @@ p {
 
 .notice {
   text-align: center;
+}
+
+#partner_images {
+  margin: 8px auto;
+  width: 400px;
+  background-color: white;
 }

@@ -1,95 +1,106 @@
-%p.notice
-  = notice
-%p.alert
-  = alert
+-if notice
+  %p.notice
+    = notice
+-if alert
+  %p.alert
+    = alert
 
 #startDate.hidden
   = @event.start_time.strftime("%Y, %-m, %d %H:%M:%S") if @event
 #nowDate.hidden
   = Time.zone.now.strftime("%Y, %-m, %d %H:%M:%S")
 
-#welcome_container.clearfix
-  .logo
-    = image_tag 'logo.png', :id => 'sgl'
-  #text
-    .subtitle.grey_bg.mb_fix 
-      %h1
-        %span Startup Grind London:
-        %span.red Live Feed
-    .subtitle 
-      %h2 
-        %span
-          = @event.start_time.strftime("%-d %B %Y") if @event
-        %span
-          with
-        %span.red
+#welcome_wrap.bg_color1
+  #welcome_container.clearfix
+    #text
+      .subtitle.grey_bg.mb_fix.first
+        %h1
+          Startup Grind London: Live Feed
+      .subtitle 
+        %h2.color5
+          %span
+            = @event.start_time.strftime("%-d %B %Y") if @event
+          %span
+            with
+          %span
+            = @event.guest if @event
+      #event_start.subtitle.color3
+        #clock
+  
+
+#whatis.bg_color2
+  %h2 Watch the live feed, ask questions, and connect with others
+
+#description_wrapper.bg_color3
+  #description
+    #guest_comp
+      .host
+        -if @event
+          =image_tag @event.guest_image_url
+      .host
+        -if @event
+          =image_tag @event.company_image_url, :id => 'company'
+
+    .text
+      %h2
+        %span.color1 GUEST -
+        %span.color1
           = @event.guest if @event
-    #event_start.subtitle
-      #clock
-  .logo
-    -if @event
-      =image_tag @event.company_image_url, :id => 'company'
+      %p
+        = @event.guest_bio if @event
 
-#whatis
-  %h2 Watch the live feed, ask questions, and connect with others. 
+#host_wrapper.bg_color4
+  #host_description
+    #host_comp
+      -if @event
+        .host
+          =image_tag @event.host_image_url
+      .host
+        = image_tag 'logo.png', :id => 'sgl'
 
-#description
-  .image
-    -if @event
-      =image_tag @event.guest_image_url
-  .text
-    %h2
-      %span GUEST -
-      %span.red
-        = @event.guest if @event
-    %p
-      = @event.guest_bio if @event
+    .text.color1
+      %h2
+        %span
+          = @event.host if @event
+        %span - HOST
+      %p
+        = @event.host_bio if @event
 
-#host_description
-  .image
-    -if @event
-      =image_tag @event.host_image_url
-  .text
-    %h2
-      %span.red
-        = @event.host if @event
-      %span - HOST
-    %p
-      = @event.host_bio if @event
-
-#bottom  
-  .login
-    - if current_user
-      = link_to destroy_user_session_path, method: :delete do
-        #logoutbutton
-          %p Logout
-      =link_to current_user.link do
-        %p.location
-          %span
-            = current_user.name
-          %span -
-          %span
-            = current_user.title
+#bottom_wrapper.bg_color3
+  #bottom.white  
+    .login
+      - if current_user
+        = link_to destroy_user_session_path, method: :delete do
+          #logoutbutton
+            %p Logout
+        -if current_user.link
+          =link_to current_user.link do
+            %p.location
+              %span
+                = current_user.name
+              %span -
+              %span
+                = current_user.title
+        -else
+          %p.location
+            = current_user.email
+      - else
+        = link_to new_user_registration_path do
+          .log.green
+            %p Register with email
+        = link_to new_user_session_path do
+          .log.bg_color1
+            %p Sign in
+    .eventbrite
+      -if @event
+        = link_to @event.eventbrite_url do
+          #eventbutton
+            %p Attend in person (Eventbrite)
       %p.location
-        = current_user.email
-    - else
-      = link_to new_user_registration_path do
-        .log.green
-          %p Register with email
-      = link_to new_user_session_path do
-        .log.blue
-          %p Sign in
-  .eventbrite
-    -if @event
-      = link_to @event.eventbrite_url do
-        #eventbutton
-          %p Attend in person (Eventbrite)
-    %p.location
-      Location:
-    %p.location
-      =@event.location if @event
+        =@event.location if @event
 
-#partners
-  %p.grey THANK YOU TO OUR AMAZING PARTNERS
-  = image_tag "google.png"
-  = image_tag "cass.png", :class => "cass"
+#partners.bg_color2
+  %p.white THANK YOU TO OUR AMAZING PARTNERS
+  #partner_images
+    = image_tag "google.png"
+    = image_tag "cass.png", :class => "cass"
