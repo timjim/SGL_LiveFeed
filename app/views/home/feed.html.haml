@@ -4,40 +4,41 @@
 %p.alert
   = alert
 
-#feed
-  #left
-    #youtube
-      .header.red_bg
-        %h1.red_bg LIVE FEED
-      %iframe{:src => "//www.youtube-nocookie.com/embed/V_n5qD240kM?rel=0"}
-    #whois
-      .header.red_bg
-        %h1.red ONLINE MEMBERS
-      - if !current_user.image
-        = link_to user_omniauth_authorize_path(:linkedin) do
-          #linkedin
-            %p Link your LinkedIn account
-        %p To see other LinkedIn viewers
-      - else
-        #user_profiles
-          - @users.each do |user|
-            .cycle
-              %p
-                = user.name if user.name
-              %p
-                = user.title if user.title
-              %p
-                -if user.link
-                  = link_to user.link, target: '_blank' do
-                    = image_tag user.image
-    #feedlogout
-      - if current_user
-        = link_to destroy_user_session_path, method: :delete do
-          #feedlogoutbutton.red_bg
-            %p Logout
-      
-  #right
-    #slido
-      .header.red_bg
-        %h1.red ASK QUESTIONS
-      %iframe{:src => "http://www.sli.do/slido/demo#ask"}
+#feed_wrap.bg_color1.clearfix  
+  #feed
+    #left
+      #youtube
+        .header.red_bg.bg_color2
+          %h1.red_bg LIVE FEED
+        %iframe{:src => "//www.youtube-nocookie.com/embed/V_n5qD240kM?rel=0"}
+      #whois
+        .header.bg_color2
+          %h1 ONLINE MEMBERS
+        - if !current_user.image
+          = link_to user_omniauth_authorize_path(:linkedin) do
+            #linkedin
+              %p Link your LinkedIn account
+          %p To see other LinkedIn viewers
+        - else
+          #user_profiles.bg_color3
+            - @users.each do |user|
+              .cycle
+                %p
+                  = user.name if user.name
+                %p
+                  = user.title if user.title
+                %p
+                  -if user.link
+                    = link_to user.link, target: '_blank' do
+                      = image_tag user.image
+      #feedlogout.bg_color2
+        - if current_user
+          = link_to destroy_user_session_path, method: :delete do
+            #feedlogoutbutton.red_bg
+              %p Logout
+        
+    #right
+      #slido
+        .header.red_bg
+          %h1.bg_color2 ASK QUESTIONS
+        %iframe{:src => "http://www.sli.do/slido/demo#ask"}

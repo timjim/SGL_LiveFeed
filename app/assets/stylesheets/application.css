@@ -12,8 +12,8 @@
  *= require animate.min
  *= require landing
  *= require login
- *= require colours
  *= require feed
+ *= require colours
  *= require_self
  */
 

@@ -1,5 +1,13 @@
-#feed {
+#feed_wrap{
   width: 100%;
+  height: 100%;
+}
+
+
+#feed {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 #youtube h1, #slido h1, #whois h1 {
@@ -14,13 +22,13 @@
 }
 
 #left {
-  width: 59.5%;
+  width: 60%;
   float: left;
   overflow: hidden;
 }
 
 #right {
-  width: 39.5%;
+  width: 40%;
   float: right;
   overflow: hidden;
 }
@@ -29,11 +37,10 @@
   overflow: hidden;
   background-color: rgb(204, 204, 204);
   width: 100%;
-  margin-bottom: 10px;
 }
 
 #youtube iframe {
-  height: 300px;
+  height: 342px;
 }
 
 #whois {
@@ -41,14 +48,11 @@
   background-color: rgb(204, 204, 204);
   height: 213px;
   width: 100%;
-  margin-bottom: 10px;
 }
 
 #feedlogout {
   overflow: hidden;
-  background-color: rgb(204, 204, 204);
   width: 100%;
-  margin-bottom: 10px;
 }
 
 #slido {
@@ -59,14 +63,12 @@
 }
 
 #slido iframe {
-  width: 96%;
-  margin: 2%;
-  height: 91%;
+  width: 100%;
+  height: 100%;
 }
 
 iframe {
-  margin: 2%;
-  width: 96%;
+  width: 100%;
 }
 
 #feedlogoutbutton {
