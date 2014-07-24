@@ -1,6 +1,6 @@
 # Live Streaming Demo
 
-This web application was hacked together for [Marian Gazdik]() and [StartUp Grind: London](). It can be found [hosted on Heroku](http://sgl-feed.herokuapp.com/) (probably sleeping).
+This web application was hacked together for [Marian Gazdik](http://www.virgin.com/author/marian-gazdik) and [StartUp Grind: London](http://startupgrind.com/london/). It can be found [hosted on Heroku](http://sgl-feed.herokuapp.com/) (probably sleeping).
 
 
 ##Concept
@@ -27,6 +27,7 @@ Networking was offered to those who signed with with the [LinkedIn API](https://
 [Rails_admin](https://github.com/sferik/rails_admin) was used, in conjunction with [CanCan](https://github.com/ryanb/cancan), and [Devise](https://github.com/plataformatec/devise). Omniauth was implemented through the use of the [omniauth-linkedin](https://github.com/skorks/omniauth-linkedin) gem.
 
 ###JavaScript
+[Skrollr](https://github.com/Prinzhorn/skrollr) and [Cycle](http://malsup.com/jquery/cycle/lite/) were used in this project in addition to the aforementioned jQuery Countdown. Animations were actually CSS, via [Animate.css](http://daneden.github.io/animate.css/).
 
 
 ##Out of Scope

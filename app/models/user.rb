@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :title, :industry, :name, :image, :link, :role
-  # attr_accessible :title, :body
-
   def self.find_for_linkedin_oauth2(auth, signed_in_user=nil)
     if user = signed_in_user || User.find_by_email(auth.info.email)
       user.provider = auth.provider
@@ -33,26 +31,8 @@ class User < ActiveRecord::Base
         user.email = auth.info.email 
         user.title = auth.info.description 
         user.industry = auth.info.industry
-        # user.password = Devise.friendly_token[0,20]
-        # user.skip_confirmation! # don't require email confirmation
-        # user.save
-        # User
       end
     end
   end
 
-  # def self.new_with_session(params, session)
-  #   super.tap do |user|
-  #     if auth = session["devise.linkedin_data"]
-  #       user.role ||= 'user'
-  #       user.link = auth.info.urls.public_profile if user.link.blank?
-  #       user.name = auth.info.name if user.name.blank?
-  #       user.image = auth.info.image if user.image.blank?
-  #       user.email = auth.info.email if user.email.blank?
-  #       user.title = auth.info.description if user.title.blank?
-  #       user.industry = auth.info.industry if user.industry.blank?
-  #       user.skip_confirmation!
-  #     end
-  #   end   
-  # end
 end
