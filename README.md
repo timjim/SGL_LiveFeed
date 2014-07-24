@@ -38,4 +38,3 @@ This application was a proof of concept - work was continued by a large team of 
 * No validations were implemented.
 
 * Not suitable for mobile devices.
-
